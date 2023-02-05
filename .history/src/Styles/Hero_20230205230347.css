@@ -1,0 +1,19 @@
+.Hero {
+    width: 100vw;
+    min-height: 100vh;
+    display: grid;
+    align-content: center;
+    justify-content: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.Hero__Card {
+    margin: 0 50px;
+    width: 350px;
+    height: 468px;
+    border-radius: 30px;
+    box-shadow: 0px 0px 10px 1px rgba(0, 0, 0, 0.1);
+}

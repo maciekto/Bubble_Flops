@@ -1,0 +1,11 @@
+.Header {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.Header__Title {
+    font-size: 1.5rem;
+    font-weight: 600;
+}
