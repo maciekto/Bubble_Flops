@@ -1,0 +1,47 @@
+.Hero {
+    min-height: auto;
+    display: grid;
+    align-content: center;
+    justify-content: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2rem;
+    flex-wrap: wrap;
+    padding: 100px 0;
+}
+
+.Hero__Card {
+    margin: 25px;
+    width: 37rem;
+    height: 54rem;
+    /* box-shadow: 0px 0px 10px 1px var(--main-boxShadowBlack); */
+    background-image: linear-gradient(to right, black 33%, rgba(255,255,255,0) 0%);
+background-position: bottom;
+background-size: 3px 1px;
+background-repeat: repeat-x;
+    padding: 50px 40px;
+    display: grid;
+    grid-template-rows: auto auto 1fr;
+    color: var(--main-black)
+}
+
+.Hero__Title {
+    font-size: 1.4em;
+    font-weight: bold;
+    margin: 0 0 30px 0;
+}
+
+.Hero__Description {
+    font-size: 1em;
+    font-weight: lighter;
+    margin: 0 0 20px 0;
+}
+
+.Hero__Button {
+    font-size: 1em;
+   align-self: flex-end;
+   font-weight: bold;
+   cursor: pointer;
+
+}

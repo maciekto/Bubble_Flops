@@ -1,0 +1,8 @@
+.App {
+    padding: 0 5vw;
+}
+.App > * {
+    width: 90vw;
+    max-width: 90vw !important;
+    font-size: 1rem;
+}

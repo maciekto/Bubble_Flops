@@ -1,0 +1,6 @@
+.App {
+    padding: 0 10vw;
+}
+.App > * {
+    width: 80vw;
+}

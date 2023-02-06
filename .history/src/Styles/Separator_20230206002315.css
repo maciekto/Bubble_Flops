@@ -1,0 +1,6 @@
+.Separator {
+    height: 1px;
+    width: 100vw;
+    margin: 0 20vw;
+    background-color: var(--color-boxShadowBlack);
+}

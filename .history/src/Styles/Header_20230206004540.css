@@ -1,0 +1,43 @@
+.Header {
+    height: 100vh;
+    display: grid;
+    grid-template-columns: 40% 60%;
+    grid-template-rows: 1fr;
+    font-size: 3.2rem;
+    text-align: center;
+    flex-direction: column;
+    color: var(--main-black);
+}
+.Header__Title {
+    grid-column: 1/2;
+    grid-row: 1/2;
+    align-self: center;
+    justify-self: center;
+    font-size: 1.6em;
+    font-weight: 600;
+    line-height: 1.6em;
+
+    animation-name: FadeIn;
+    animation-duration: 1s;
+    animation-timing-function: ease-in;
+    animation-fill-mode: both;
+}
+.Header__Description {
+    grid-column: 1/2;
+    grid-row: 1/2;
+    align-self: center;
+    justify-self: center;
+    font-size: 0.5em;
+
+    animation-name: FadeIn;
+    animation-duration: 1s;
+    animation-timing-function: ease-in;
+    animation-delay: 0.5s;
+    animation-fill-mode: both;
+}
+.Header__Image {
+    grid-column: 2/3;
+    width: 80%;
+    align-self: center;
+    justify-self: flex-end;
+}
