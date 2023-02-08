@@ -1,0 +1,13 @@
+.ProductCard {
+    margin: 25px;
+    width: 37rem;
+    height: 45rem;
+    padding: 50px 40px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    flex-direction: column;
+}
+.ProductCard__Image {
+    width: 100%;
+}

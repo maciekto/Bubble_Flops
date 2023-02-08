@@ -1,0 +1,41 @@
+.ProductCard {
+    margin: 25px;
+    width: 67rem;
+    height: 50rem;
+    padding: 50px 40px;
+    display: grid;
+    grid-template-rows: 40px 30px auto 50px;
+    color: var(--main-black);
+    justify-items: center;
+    align-items: center;
+    border-radius: 40px;
+    box-shadow: 0px 0px 10px 1px var(--main-boxShadowBlack);
+}
+.ProductCard__Image {
+    max-width: 80%;
+}
+.ProductCard__AddToCart {
+    cursor: pointer;
+    transition: background 0.4s cubic-bezier(0.785, 0.135, 0.15, 0.86);
+    background: rgb(255,255,255);
+background: linear-gradient(0deg, rgba(255,255,255,1) 0%, rgba(240,234,229,1) 100%);
+    background-position: 0rem 4rem;
+    background-size: 150rem 150rem;
+    padding: 0.7rem 2rem;
+    border-radius: 20px;
+    width: 20rem;
+    height: 4rem;
+    display: grid;
+    place-items: center;
+
+}
+.ProductCard__AddToCart:hover {
+    transition: background 0.30s cubic-bezier(0.785, 0.135, 0.15, 0.86);
+    background-position: 0rem 0rem;
+}
+.ProductCard__Price {
+    font-size: 0.9em;
+}
+.ProductCard__Name {
+    font-size: 1.1em;
+}

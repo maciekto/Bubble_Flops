@@ -1,0 +1,20 @@
+.ProductCard {
+    margin: 25px;
+    width: 37rem;
+    height: 45rem;
+    padding: 50px 40px;
+    display: grid;
+    grid-template-rows: 50px auto 50px 50px;
+    color: var(--main-black);
+    justify-items: center;
+    align-items: center;
+}
+.ProductCard__Image {
+    max-width: 70%;
+}
+.ProductCard__AddToCart {
+    font-weight: bold;
+}
+.ProductCard__Price {
+    font-size: 0.8em;
+}

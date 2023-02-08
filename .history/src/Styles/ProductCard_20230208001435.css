@@ -1,0 +1,9 @@
+.ProductCard {
+    margin: 25px;
+    width: 37rem;
+    height: 45rem;
+    padding: 50px 40px;
+    display: grid;
+    grid-template-rows: auto auto auto 1fr;
+    color: var(--main-black)
+}

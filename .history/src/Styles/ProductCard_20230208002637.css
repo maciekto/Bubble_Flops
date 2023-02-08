@@ -1,0 +1,14 @@
+.ProductCard {
+    margin: 25px;
+    width: 37rem;
+    height: 45rem;
+    padding: 50px 40px;
+    display: grid;
+    grid-template-rows: 100px auto 50px 50px;
+    color: var(--main-black);
+    justify-items: center;
+    align-items: center;
+}
+.ProductCard__Image {
+    width: 100%;
+}

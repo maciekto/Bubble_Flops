@@ -1,0 +1,11 @@
+.FlexSection {
+    min-height: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2rem;
+    flex-wrap: wrap;
+    padding: 100px 0;
+    scroll-snap-type: y mandatory;
+    scroll-snap-align: start;
+}

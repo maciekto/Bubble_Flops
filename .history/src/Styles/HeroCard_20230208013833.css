@@ -1,0 +1,49 @@
+.Hero__Card {
+    margin: 25px;
+    width: 37rem;
+    min-height: 45rem;
+    box-shadow: 0px 0px 10px 1px var(--main-boxShadowBlack);
+    /* background-image: url("data:image/svg+xml,%3csvg width='100%25' height='100%25' xmlns='http://www.w3.org/2000/svg'%3e%3crect width='100%25' height='100%25' fill='none' stroke='%2333333344' stroke-width='4' stroke-dasharray='6%2c 14' stroke-dashoffset='0' stroke-linecap='square'/%3e%3c/svg%3e"); */
+    padding: 50px 40px;
+    display: grid;
+    grid-template-rows: auto auto 1fr;
+    color: var(--main-black);
+    border-radius: 20px;
+    scroll-snap-align: start;
+}
+.Hero__Title {
+    font-size: 1.4em;
+    font-weight: bold;
+    margin: 0 0 30px 0;
+}
+
+.Hero__Description {
+    font-size: 1em;
+    font-weight: lighter;
+    margin: 0 0 20px 0;
+}
+
+.Hero__Button {
+    font-size: 1em;
+   align-self: flex-end;
+   font-weight: bold;
+   cursor: pointer;
+
+   transition: background 0.4s cubic-bezier(0.785, 0.135, 0.15, 0.86);
+   display: grid;
+   align-content: center;
+   place-content: center;
+   background: rgb(255,255,255);
+    background: linear-gradient(0deg, rgba(255,255,255,1) 0%, rgba(240,234,229,1) 100%);
+    background-position: 0rem 4rem;
+    background-size: 150rem 150rem;
+    padding: 0.7rem 2rem;
+    border-radius: 2rem;
+    height: 4rem;
+
+}
+
+.Hero__Button:hover {
+    transition: background 0.30s cubic-bezier(0.785, 0.135, 0.15, 0.86);
+    background-position: 0rem 0rem;
+}

@@ -1,0 +1,12 @@
+.Separator {
+    height: 1px;
+    width: 40vw;
+    margin: 0 auto;
+    background-color: var(--main-beige);
+}
+
+@media (max-width: 767px) {
+    .Separator {
+        width: 70vw;
+    }
+}

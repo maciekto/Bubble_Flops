@@ -1,0 +1,13 @@
+.App {
+    padding: 0 5vw;
+    overflow: scroll;
+    scroll-snap-type: mandatory;
+    scroll-behavior: smooth;
+
+    scroll-snap-points-y: repeat(100vh);
+}
+.App > * {
+    width: 90vw;
+    max-width: 90vw !important;
+    scroll-snap-align: start;
+}
