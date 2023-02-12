@@ -1,0 +1,58 @@
+.Basket {
+    position: relative;
+    transition: 0.4s;
+    width: 10rem;
+    height: 10rem;
+    position: fixed;
+    right: 2rem;
+    bottom: 2rem;
+    background: white;
+    z-index: 1;
+    border-radius: 50%;
+    box-shadow: 0px 0px 10px 1px var(--main-boxShadowBlack);
+}
+.Basket__Close {
+    display: grid;
+    place-items: center;
+}
+.Basket__ShoppingCartIcon {
+    width: 50%;
+}
+.Basket__Open {
+    border-radius: 20px;
+    transition: 0.4s;
+    width: 50rem;
+    height: 30rem;
+}
+.Basket__Item {
+    height: 120px;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+}
+.Basket__Image {
+    width: 100px;
+    grid-row: 1/3;
+    grid-column: 1/2;
+    align-self: center;
+    justify-self: center;
+}
+.Basket__Name {
+    align-self: flex-end;
+}
+.Basket__Price {
+    align-self: flex-start;
+}
+.Basket__Exit {
+    animation-name: FadeIn;
+    animation-duration: 0.4s;
+    animation-timing-function: ease;
+    animation-delay: 0.4s;
+    animation-fill-mode: both;
+    position: absolute;
+    right: 2rem;
+    top: 1.5rem;
+    font-size: 3rem;
+    cursor: pointer;
+}
