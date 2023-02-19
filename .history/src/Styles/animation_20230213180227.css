@@ -1,0 +1,24 @@
+@keyframes FadeIn {
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+}
+
+
+@keyframes Bounce {
+    0%{
+        transform: scale(1);
+    }
+    30% {
+        transform: scale(0.8); 
+    }
+    60% {
+        transform: scale(1.2); 
+    }
+    100%{
+        opacity: 1;
+    }
+}

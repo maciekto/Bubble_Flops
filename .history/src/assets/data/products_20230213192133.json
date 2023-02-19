@@ -1,0 +1,14 @@
+{
+    "BF_Beige": {
+        "id": 1,
+        "name": "Bubble Flops - Beige",
+        "image": "http://localhost:5173/src/assets/images/flops__beige.jpeg",
+        "price": "99,99$"
+    },
+    "BF_Black": {
+        "id": 2,
+        "name": "Bubble Flops - Black",
+        "image": "http://localhost:5173/src/assets/images/flops__black.png",
+        "price": "89,99$"
+    }
+}

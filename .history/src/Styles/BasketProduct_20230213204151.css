@@ -1,0 +1,24 @@
+.BasketProduct {
+    height: 120px;
+    width: 100%;
+    display: grid;
+    grid-template-columns: auto 1fr;
+    grid-template-rows: 1fr 1fr;
+    font-size: 2em;
+    grid-gap: 20px
+}
+
+.BasketProduct__Image {
+    width: 100px;
+    grid-row: 1/3;
+    grid-column: 1/2;
+    align-self: center;
+    justify-self: center;
+    border-radius: 3rem;
+}
+.BasketProduct__Name {
+    align-self: flex-end;
+}
+.BasketProduct__Price {
+    align-self: flex-start;
+}

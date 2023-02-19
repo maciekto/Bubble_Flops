@@ -1,0 +1,32 @@
+.BasketProduct {
+    height: auto;
+    width: 100%;
+    display: grid;
+    grid-template-columns: auto 1fr;
+    grid-template-rows: 1.5em 1.5em 1fr;
+    font-size: 1.5em;
+    grid-gap: 5px;
+    margin: 20px 0;
+    animation-name: FadeIn;
+    animation-duration: 0.4s;
+    animation-timing-function: ease-in;
+    animation-fill-mode: both;
+    animation-delay: 0.6s;
+}
+
+.BasketProduct__Image {
+    width: 100px;
+    grid-row: 1/4;
+    grid-column: 1/2;
+    align-self: center;
+    justify-self: center;
+    border-radius: 3rem;
+}
+.BasketProduct__Name {
+    margin-left: 10px;
+    align-self: flex-end;
+}
+.BasketProduct__Price {
+    margin-left: 10px;
+    align-self: flex-start;
+}
