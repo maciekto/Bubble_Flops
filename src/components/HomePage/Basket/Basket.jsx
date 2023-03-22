@@ -4,7 +4,7 @@ import React, {useState} from 'react'
 import './Basket.css'
 
 // ASSETS
-import ShoppingCart from './../../../assets/images/ShoppingCart.png'
+import ShoppingCart from './../../../assets/images/shoppingCart.png'
 
 // COMPONENTS
 import BasketProduct from '../BasketProduct/BasketProduct'
