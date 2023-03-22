@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-
+import { useOutletContext } from 'react-router-dom'
 // COMPONENTS
 import Header from './Header/Header'
 import FlexSection from './FlexSection/FlexSection'
@@ -8,15 +8,7 @@ import ProductCard from '../ProductsPage/ProductCard/ProductCard'
 import Separator from '../utilityPages/Separator/Separator'
 import Basket from './Basket/Basket'
 
-// DATA
-import products from '../../assets/data/products.json'
-
 export default function () {
-
-
-    const [isBasketOpen, setIsBasketOpen] = useState(false)
-    const [addedProdId, setaddedProdId] = useState(null)
-
     const heroCardContent = [
         {
         title: 'Why Bubble Flops?',
@@ -36,50 +28,12 @@ export default function () {
         With this feature you really can't be bored!</>
         }
     ]
+    const [ addToBasket, products ] = useOutletContext()
 
-    let windowWidth = window.innerWidth
-    window.addEventListener('resize', () => {
-        windowWidth = window.innerWidth
-    })
-    window.addEventListener('scroll', () => {
-        handleCloseBasket()
-    })
-
-
-    
-    function handleOpenBasket(e) {
-        e.stopPropagation()
-        setIsBasketOpen(true)
-    }
-
-    function handleCloseBasket(e) {
-        if(e == undefined) {
-        setIsBasketOpen(false)
-        } else {
-        e.stopPropagation()
-        setIsBasketOpen(false)
-        }
-        
-    }
-
-    function addToBasket(id) {
-        setaddedProdId(id)
-
-
-        if(windowWidth < 1000) {
-        setTimeout(() => {
-            setIsBasketOpen(true)
-        }, 400);
-        } else {
-        setIsBasketOpen(true)
-        }
-        
-        
-    }
 
     return (
         <>
-            <Basket isBasketOpen={isBasketOpen} handleOpenBasket={handleOpenBasket} handleCloseBasket={handleCloseBasket} products={products} addedProdId={addedProdId}/>
+            
 
             <Header />
             <Separator />

@@ -1,4 +1,4 @@
-import React, {useState} from 'react'
+import React, {useState, useEffect} from 'react'
 
 // CSS styles
 import './Basket.css'
@@ -17,8 +17,29 @@ export default function Basket(props) {
   const [BasketProductsComponents, setBasketProductsComponents] = useState([])
   const [FullPrice, setFullPrice] = useState(0)
 
+  const [isBasketOpen, setIsBasketOpen] = useState(false)
+
   //PROPS
-  const {isBasketOpen, handleOpenBasket, handleCloseBasket, addedProdId, products} = props
+  const {addedProdId, products} = props
+
+  
+  window.addEventListener('scroll', () => {
+      handleCloseBasket()
+  })
+
+  function handleCloseBasket(e) {
+    if(e == undefined) {
+      setIsBasketOpen(false)
+    } else {
+      e.stopPropagation()
+      setIsBasketOpen(false)
+    }
+      
+  }
+  function handleOpenBasket(e) {
+    e.stopPropagation()
+    setIsBasketOpen(true)
+  }
 
 
   // Take care of adding the product to the basket

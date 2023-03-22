@@ -1,13 +1,23 @@
-import React from "react";
+import React, {useState} from "react";
 
 // CSS STYLES
 import './ProductCard.css'
 
 export default function ProductCard(props) {
+    const [valid, setValid] = useState(false)
+
     const {id, products} = props;
 
+    if(!valid) {
+        if(products[id] != undefined) { 
+            setValid(true)
+        }
+    }
+    
+
     return (
-        <div className="ProductCard">
+        <> {valid ?
+            <div className="ProductCard">
             <div className="ProductCard__Name">
                 {products[id].name}
             </div>
@@ -20,6 +30,8 @@ export default function ProductCard(props) {
                 Add to cart
             </div>
 
-        </div>
+        </div>    
+        : null}
+        </>
     )
 }

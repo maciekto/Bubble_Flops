@@ -1,4 +1,7 @@
 import React from 'react'
+import {
+  useOutletContext
+} from 'react-router-dom'
 
 // CSS STYLES
 
@@ -10,12 +13,17 @@ import ProductCard from './ProductCard/ProductCard'
 import products from '../../assets/data/products.json'
 
 export default function ProductsPage() {
+  const [ addToBasket, products ] = useOutletContext()
+
   return (
-    <> 
-    BANGER <br />
+    <>
     <FlexSection>
-        <ProductCard id={0} products={products} />
-        <ProductCard id={1} products={products} />
+      {
+        products.map((element, index) => {
+          console.log(element.id)
+          return <ProductCard key={element.id} id={element.id} products={products} addToBasket={addToBasket} />
+        })
+      }
     </FlexSection>
     </>
   )
