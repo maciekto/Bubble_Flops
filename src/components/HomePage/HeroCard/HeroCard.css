@@ -33,11 +33,13 @@
 }
 
 .Hero__Button {
+    outline: none;
+    border: none;
     font-size: 1em;
    align-self: flex-end;
    font-weight: bold;
    cursor: pointer;
-
+    font-size: inherit;
    transition: background 0.4s cubic-bezier(0.785, 0.135, 0.15, 0.86);
    display: grid;
    align-content: center;

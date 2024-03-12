@@ -46,7 +46,6 @@ export default function () {
                 <ProductCard id={0} products={products} addToBasket={addToBasket}/>
                 <ProductCard id={1} products={products} addToBasket={addToBasket}/>
             </FlexSection>
-            <Separator />
             <ContactForm />
         </>
     )
