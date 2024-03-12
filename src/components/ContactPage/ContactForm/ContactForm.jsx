@@ -57,7 +57,7 @@ export default function ContactForm() {
 
   return (
     <Form className='Form'>
-        <div className='Form__Title'>Contact</div>
+        <h2 className='Form__Title'>Contact</h2>
         <div>
           <label htmlFor="title" className='Form__Label' onFocus={() => labelClassHandle('title')} onBlur={() => labelClassHandle('title')}>
             <span className={titleClass}>Title</span>

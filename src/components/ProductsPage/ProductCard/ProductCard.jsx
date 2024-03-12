@@ -18,17 +18,17 @@ export default function ProductCard(props) {
     return (
         <> {valid ?
             <div className="ProductCard">
-            <div className="ProductCard__Name">
+            <h3 className="ProductCard__Name">
                 {products[id].name}
-            </div>
+            </h3>
             <div className="ProductCard__Price">
                 {products[id].price.dolar}$
             </div>
             <img className="ProductCard__Image" src={products[id].image} alt={products[id].name} />
             
-            <div className="ProductCard__AddToCart" onClick={() => props.addToBasket(id)}>
+            <button className="ProductCard__AddToCart" onClick={() => props.addToBasket(id)}>
                 Add to cart
-            </div>
+            </button>
 
         </div>    
         : <div>not valid element</div>}

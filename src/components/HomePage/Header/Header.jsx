@@ -10,15 +10,15 @@ import HeaderImage from '../../../assets/images/flops__beige.jpeg'
 
 function Header() {
   return (
-    <div className='Header'>
-        <div className='Header__Title'>
+    <header className='Header'>
+        <h1 className='Header__Title'>
             Bubble Flops
-        </div>
-        <div className='Header__Description'>
+        </h1>
+        <h2 className='Header__Description'>
             For your comfort and safety
-        </div>
+        </h2>
         <img className='Header__Image' src={HeaderImage} alt="Turn on images" />
-    </div>
+    </header>
   )
 }
 
