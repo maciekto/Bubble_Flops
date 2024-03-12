@@ -31,7 +31,7 @@ export default function ProductCard(props) {
             </div>
 
         </div>    
-        : null}
+        : <div>not valid element</div>}
         </>
     )
 }

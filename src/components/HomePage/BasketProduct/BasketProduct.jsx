@@ -6,7 +6,7 @@ import './BasketProduct.css'
 export default function BasketProduct(props) {
   const [productCount, setproductCount] = useState(1)
 
-    const {id, product, handleAmountChange, handleDeleteProduct} = props
+    const {id, product, amount, handleAmountChange, handleDeleteProduct} = props
 
     function handleCounter(type) {
       if(type == 'add') {
@@ -32,7 +32,7 @@ export default function BasketProduct(props) {
             {product.name}
         </div>
         <div className='BasketProduct__Price'>
-            {product.price.dolar}$
+            {Math.round((product.price.dolar * productCount)*100)/100}$
         </div>
         <div className='BasketProduct__Counter'>
           <div onClick={() => handleCounter('substract')}>

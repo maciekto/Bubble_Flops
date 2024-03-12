@@ -13,7 +13,7 @@ import BasketProduct from '../BasketProduct/BasketProduct'
 
 export default function Basket(props) {
   //STATES
-  const [BasketProductProperties, setBasketProductProperties] = useState([])
+  const [ProductsAddedToBasket, setProductsAddedToBasket] = useState([])
   const [BasketProductsComponents, setBasketProductsComponents] = useState([])
   const [FullPrice, setFullPrice] = useState(0)
 
@@ -41,51 +41,69 @@ export default function Basket(props) {
     setIsBasketOpen(true)
   }
 
+  useEffect(() => {
+    console.log(ProductsAddedToBasket)
+    // If there is any error do not add produs with id null
+    if(addedProdId == null || addedProdId == undefined) {
+      console.error(`Product does not exist: ${addedProdId}`)
+    } else {
 
-  // Take care of adding the product to the basket
-  if(addedProdId == null) {
-    // Do nothing
-  } else {
-      let arrayOfIds = BasketProductProperties.map(id => id.id)
-      if(arrayOfIds.includes(addedProdId)) {
-
+      // Take the ids from the object and check if the product is already added to the basket
+      let AddedToBasketIDs = ProductsAddedToBasket.map(id => id.id)
+      if(AddedToBasketIDs.includes(addedProdId)) {
+        // Product is already in the basket
+        console.error(`Product already added to basket: ${addedProdId}`)
       } else {
-          setBasketProductProperties([...BasketProductProperties, {
-            id: addedProdId,
-            amount: 1
-          }])
-           setBasketProductsComponents([...BasketProductsComponents, <BasketProduct key={addedProdId} id={addedProdId} product={products[addedProdId]} handleAmountChange={handleAmountChange} />])
-     
-           setFullPrice((prevState) => {
-             return Math.round((prevState + products[addedProdId].price.dolar) *100 ) /100
-           })
-      }   
-  }
+        // Product does not exist in basket
 
-  function handleAmountChange(id, type) {
-      products.forEach(product => {
-        if(product.id == id) {
-          if(type == 'add') {
-            setFullPrice((prevState => {
-              console.log(prevState)
-              console.log(product.price)
-              return Math.round((prevState + product.price.dolar)*100) /100
-            }))
-          } else if(type == 'substract') {
-            setFullPrice((prevState => {
-              console.log(prevState)
-              return Math.round((prevState - product.price.dolar)*100) /100
-            }))
-          }
+        // Add BasketProduct component to basket
+        setBasketProductsComponents([...BasketProductsComponents, <BasketProduct key={addedProdId} id={addedProdId} product={products[addedProdId]} handleAmountChange={handleAmountChange} amount={1} />])
+
+        // Setting new full prive
+        setFullPrice((prevState) => {
+          return Math.round((prevState + products[addedProdId].price.dolar) *100 ) /100
+        })
+
+        // Update ProductAddedToBasket object with added product
+        setProductsAddedToBasket([...ProductsAddedToBasket, {
+          id: addedProdId,
+          amount: 1,
+          price: products[addedProdId].price
+        }])
+      }
+    }
+  }, [addedProdId])
+
+  
+
+ 
+
+  const handleAmountChange = (id, type) => {
+    console.log('siemano')
+      console.log(ProductsAddedToBasket)
+      // products.forEach(product => {
+      //   if(product.id == id) {
+      //     if(type == 'add') {
+      //       setFullPrice((prevState => {
+      //         console.log(prevState)
+      //         console.log(product.price)
+      //         return Math.round((prevState + product.price.dolar)*100) /100
+      //       }))
+      //     } else if(type == 'substract') {
+      //       setFullPrice((prevState => {
+      //         console.log(prevState)
+      //         return Math.round((prevState - product.price.dolar)*100) /100
+      //       }))
+      //     }
           
-        } else {
-        }
-      })
+      //   } else {
+      //   }
+      // })
   }
   
   // Show basket if at least one product is added
   let basketDOM = undefined
-  if(BasketProductProperties.length == 0) {
+  if(ProductsAddedToBasket.length == 0) {
     basketDOM = null
   } else {
     basketDOM = 

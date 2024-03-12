@@ -1,0 +1,114 @@
+.Form {
+  margin: 4rem 0;
+  display: flex;
+  flex-direction: column;
+  gap: 10rem;
+  padding: 4rem 5vw 2rem;
+  font-weight: 300;
+  color: #333;
+}
+.Form__Title {
+  text-align: center;
+  font-size: 3rem;
+  font-weight: bold;
+}
+.Form > div {
+  display: flex;
+  flex-direction: column;
+  gap: 10rem;
+}
+@media (min-width: 768px) {
+  .Form > div {
+    flex-direction: row;
+  }
+}
+.Form__Label {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  font-size: 2.5rem;
+  position: relative;
+  height: auto;
+  cursor: text;
+  width: 100%;
+}
+label input, label textarea {
+  width: auto;
+  border-bottom: 1px solid #333;
+  border-top: none;
+  border-left: none;
+  border-right: none;
+  margin-top: 0;
+  font-size: 2.5rem;
+  width: 100%;
+  font-weight: 300;
+  padding: 1rem 0;
+
+}
+
+
+textarea {
+  height: 20rem;
+}
+
+.Form__Label > span {
+  padding: 0 0 0 0;
+  text-align: left;
+  position: absolute;
+  top: 1rem;
+  left: 0;
+  transition: 0.4s;
+}
+
+.Form > input[type='submit'] {
+  max-width: 20rem;
+  font-size: 3rem;
+  border: none;
+  cursor: pointer;
+  transition: background 0.4s cubic-bezier(0.785, 0.135, 0.15, 0.86);
+  background: rgb(255,255,255);
+  background: linear-gradient(0deg, rgba(255,255,255,1) 0%, rgba(240,234,229,1) 100%);
+  background-position: 0 5rem;
+  background-size: 150rem 150rem;
+  padding: 0.7rem 2rem;
+  border-radius: 2rem;
+  min-width: 20rem;
+  height: 5rem;
+  display: grid;
+  place-items: center;
+
+  -webkit-user-select: none; /* Safari */
+  -ms-user-select: none; /* IE 10 and IE 11 */
+  user-select: none;
+
+}
+.Form__Span__Focus {
+  top: -3.5rem !important;
+  transition: 0.4s;
+  font-weight: 500;
+}
+.Form > input[type='submit']:hover {
+  transition: background 0.30s cubic-bezier(0.785, 0.135, 0.15, 0.86);
+  background-position: 0rem 0rem;
+}
+.submitClass {
+  animation: submitClass 1s ease-in-out both;
+}
+
+@keyframes submitClass {
+  0% {
+    transform: translateX(0);
+  }
+  35% {
+    transform: translateX(100vw);
+  }
+  37% {
+    transform: translateX(100vw) translateY(1000vw);
+  }
+  40% {
+    transform: translateX(-100vw);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}

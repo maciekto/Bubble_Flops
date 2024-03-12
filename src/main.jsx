@@ -19,7 +19,6 @@ import {
   RouterProvider,
 } from "react-router-dom"
 
-
 const router = createBrowserRouter([
   {
     path: '/',
@@ -48,6 +47,7 @@ const router = createBrowserRouter([
   
   
 ])
+
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>

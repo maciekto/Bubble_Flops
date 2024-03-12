@@ -1,6 +1,6 @@
 .Hero__Card {
     margin: 25px;
-    width: 37rem;
+    width: 57rem;
     min-height: 45rem;
     box-shadow: 0px 0px 10px 1px var(--main-boxShadowBlack);
     /* background-image: url("data:image/svg+xml,%3csvg width='100%25' height='100%25' xmlns='http://www.w3.org/2000/svg'%3e%3crect width='100%25' height='100%25' fill='none' stroke='%2333333344' stroke-width='4' stroke-dasharray='6%2c 14' stroke-dashoffset='0' stroke-linecap='square'/%3e%3c/svg%3e"); */
@@ -8,10 +8,18 @@
     display: grid;
     grid-template-rows: auto auto 1fr;
     color: var(--main-black);
-    border-radius: 20px;
+    border-radius: 40px;
     scroll-snap-align: center;
     grid-gap: 1rem;
 }
+
+@media (min-width: 767px) {
+    .Hero__Card {
+        border-radius: 20px;
+        width: 37rem;
+    }
+}
+
 .Hero__Title {
     font-size: 1.4em;
     font-weight: bold;

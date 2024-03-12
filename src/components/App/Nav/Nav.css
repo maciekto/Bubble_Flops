@@ -2,8 +2,8 @@
     display: flex;
     width: 100%;
     align-items: center;
-    justify-content: space-evenly;
+    justify-content: space-between;
     font-size: 1.5em;
-    padding: 10px 0;
+    padding: 10px 5vw;
     height: 100px;
 }

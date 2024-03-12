@@ -7,6 +7,7 @@ import HeroCard from './HeroCard/HeroCard'
 import ProductCard from '../ProductsPage/ProductCard/ProductCard'
 import Separator from '../utilityPages/Separator/Separator'
 import Basket from './Basket/Basket'
+import ContactForm from '../ContactPage/ContactForm/ContactForm'
 
 export default function () {
     const heroCardContent = [
@@ -33,8 +34,6 @@ export default function () {
 
     return (
         <>
-            
-
             <Header />
             <Separator />
             <FlexSection>
@@ -47,6 +46,7 @@ export default function () {
                 <ProductCard id={0} products={products} addToBasket={addToBasket}/>
                 <ProductCard id={1} products={products} addToBasket={addToBasket}/>
             </FlexSection>
+            <ContactForm />
         </>
     )
 }
