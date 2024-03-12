@@ -1,6 +1,7 @@
 .Form {
   margin: 4rem 0;
   display: flex;
+
   flex-direction: column;
   gap: 10rem;
   padding: 4rem 5vw 2rem;
@@ -8,7 +9,7 @@
   color: #333;
 }
 .Form__Title {
-  text-align: center;
+  text-align: left;
   font-size: 3rem;
   font-weight: bold;
 }
