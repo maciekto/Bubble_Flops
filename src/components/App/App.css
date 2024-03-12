@@ -1,8 +1,9 @@
 .App {
-    padding: 0 5vw;
+    max-width: 1300px;
+    margin: 0 auto;
 }
 .App > * {
-    width: 90vw;
+    /* width: 90vw; */
     max-width: 90vw !important;
   
 }
